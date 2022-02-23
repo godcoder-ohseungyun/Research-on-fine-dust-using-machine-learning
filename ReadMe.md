@@ -22,7 +22,7 @@ MySQL
 
 ---
 
-+ [머신러닝서버 API Doc - author: osy](#https://github.com/godcoder-ohseungyun/Research-on-fine-dust-using-machine-learning/blob/master/machine-learning-Server/machine-learning-Server%20API%20Document.md)
++ [머신러닝서버 API Doc - author: osy](https://github.com/godcoder-ohseungyun/Research-on-fine-dust-using-machine-learning/blob/master/machine-learning-Server/machine-learning-Server%20API%20Document.md)
 + 
 
 <br>
