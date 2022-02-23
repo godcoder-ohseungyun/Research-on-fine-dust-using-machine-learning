@@ -7,6 +7,10 @@ from UrlBuilder import UrlBuilder
 #
 from DFBuilder import DFBuilder
 
+
+from Item import Item
+import json
+
 app = Flask(__name__)
 
 
@@ -26,12 +30,12 @@ def getAnalysis():
 
     #RegionalRepresentativeDataFrame =  DFBuilder().csvToDataFrame(csv)
 
-    result = fianlResult(LogisticModel,RegionalRepresentativeDataFrame)
+    resultList = fianlResult(LogisticModel,RegionalRepresentativeDataFrame)
+    
+    #TODO: object list -> JSON 변환작업
+    jsonResult = json.dumps([Item.__dict__ for Item in resultList],ensure_ascii=False)
 
-
-    #TODO: result -> JSON 변환작업
-
-    return "list to json"
+    return jsonResult
     
 
 
@@ -56,9 +60,12 @@ def doLogisticRegression(finalDataFrame):
 
 def fianlResult(LogisticModel,RegionalRepresentativeDataFrame):
 
-    #TODO
+    #TODO: 구현해야함 지금은 테스트코드임
+    testList = list()
+    testList.append(Item("서울","송파",28,10))
+    testList.append(Item("서울","동작",70,6))
 
-    return "최종 결과"
+    return testList
 
 
 
