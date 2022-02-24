@@ -51,10 +51,13 @@ def getAnalysis():
     #최종 결과: 객체 리스트 형태
     resultList = fianlResult(LogisticModel,RegionalRepresentativeDataFrame)
     
-    #TODO: object list -> JSON 변환작업
+    #object list -> JSON 변환작업
     jsonResult = json.dumps([Item.__dict__ for Item in resultList], ensure_ascii=False)
+	
+    #응답 http 생성: *반드시 미디어 타입 "application/json; charset=utf-8"로 할것 안그러면 text/html로 전달됨
+    response = Response(response=jsonResult, status=200, mimetype="application/json; charset=utf-8")
 
-    return jsonResult
+    return response
 ~~~
 
 > **reference**

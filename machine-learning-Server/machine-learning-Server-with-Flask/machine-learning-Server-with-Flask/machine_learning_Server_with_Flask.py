@@ -1,5 +1,5 @@
 from flask import Flask 
-
+from flask import Response
 
 # 사용자 정의 모듈: 모듈로 부터 클래스 가져옴: 임포트 방식 알아둘것
 from UrlBuilder import UrlBuilder
@@ -13,6 +13,19 @@ import json
 
 app = Flask(__name__)
 
+#테스트 컨트롤러
+@app.route('/test')
+def test():
+
+    testList = list()
+    testList.append(Item("서울","송파",28,10))
+    testList.append(Item("서울","동작",70,6))
+    
+    #TODO: object list -> JSON 변환작업
+    jsonResult = json.dumps([Item.__dict__ for Item in testList],ensure_ascii=False) #testList -> resultList
+
+    response = Response(response=jsonResult, status=200, mimetype="application/json; charset=utf-8")
+    return response
 
 
 @app.route('/')
@@ -28,14 +41,16 @@ def getAnalysis():
 
     LogisticModel = doLogisticRegression(finalDataFrame)
 
-    #RegionalRepresentativeDataFrame =  DFBuilder().csvToDataFrame(csv)
+    RegionalRepresentativeDataFrame =  DFBuilder().csvToDataFrame(csv)
 
     resultList = fianlResult(LogisticModel,RegionalRepresentativeDataFrame)
     
     #TODO: object list -> JSON 변환작업
-    jsonResult = json.dumps([Item.__dict__ for Item in resultList],ensure_ascii=False)
+    jsonResult = json.dumps([Item.__dict__ for Item in resultList],ensure_ascii=False) 
+    
+    response = Response(response=jsonResult, status=200, mimetype="application/json; charset=utf-8")
 
-    return jsonResult
+    return response
     
 
 
