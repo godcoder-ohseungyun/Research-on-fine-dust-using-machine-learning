@@ -2,6 +2,57 @@
 
 ---
 
+## 개요
+
+**[공학적 의구심]**
+
+**미래에 지속적으로 이슈화될 주제는 무었이 있을까?** 바로 미세먼지 일것이다. <u>미세먼지는 어느덧 지역 상권, 부동산에도 영향을 미칠 정도</u>다.
+
+> 공기가 좋은것이 <u>마켓팅에 일환</u>이 될 정도
+
+<BR>
+
+그럼 우리나라에서 국민들을 괴롭히는 미세먼지는 <u>모두 중국</u> 때문일까?
+
+ 국립환경과학원이 2019년에 발표한 바에 따르면 아래 사진처럼 우리나라 미세먼지 원인 중 <u>50%</u> 이상이 <u>국내에서 발생되는 미세먼지 때문</u>이라고 한다.
+
+<BR>
+
+1. <u>왜</u> 지역마다 미세먼지 지수가 다를까? 
+2. <u>국내 한정 어떤 특징</u> 들이 국내 미세먼지 발생에 영향력을 가지고있을까 ?
+3. 앞으로 국내 미세먼지 <u>동향</u>은 어떻게 변화할까?
+4. 이런 동향은 국내 지역 부동산 <u>시장에 많은 영향</u>을 미칠까?
+
+<BR>
+
+라는 공학적 의구심을 가지고 연구를 해보고자 한다.
+
+**[공학적 해결]**
+
+K-MEANS 클러스터링 , 선형회귀분석 , 로지스틱 회귀분석을 가지고 분석 및 결론 도출
+
+**[파생효과]**
+
+1. 거주 지역의 대기질 전망과 대기질 위협 요인 을 제공함으로써 사용자들의  거주 지역 선정에 도움을 줄수있다.
+2. 거주 지역과 거주 공간의 규모 경재력 등 다양한 특징에 따라 적합한 집안 공기 케어 방법을 제시하고 각종 상품들을 연계할 수 있다.
+
+> LG퓨리케어를 구매할 경재력이 없는 학생들에겐 스파티필름 등 정화식물제품을 추천하고
+>
+> 거주 공간 규모와 거주지역 대기 전망에 따라 몇개의 상품이 필요한지 어떻게 관리하는지 정보 제공
+
+---
+
+<br>
+
+## Server API Documents - author: osy
+
++ [머신러닝서버 API Doc - author: osy](https://github.com/godcoder-ohseungyun/Research-on-fine-dust-using-machine-learning/blob/master/machine-learning-Server/machine-learning-Server%20API%20Document.md)
++ 
+
+---
+
+<br>
+
 ## 사용기술
 
 PYTHON: K-means , 선형회귀 분석 , 로지스틱 회귀분석
@@ -15,15 +66,6 @@ vue.js
 MySQL
 
 ---
-
-<br>
-
-## Server API Documents - author: osy
-
----
-
-+ [머신러닝서버 API Doc - author: osy](https://github.com/godcoder-ohseungyun/Research-on-fine-dust-using-machine-learning/blob/master/machine-learning-Server/machine-learning-Server%20API%20Document.md)
-+ 
 
 <br>
 
