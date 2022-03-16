@@ -42,7 +42,7 @@ class DFBuilder:
         def buildDataFrame(self, url1,url2):
 
             #converting..
-            testDF= self.jsonToDataFrame(url2)
+            testDF= self.jsonToDataFrame(url2) # TestCode 삭제 예정
 
             alertStatusDF= self.jsonToDataFrame(url2)
    
