@@ -203,7 +203,7 @@ https://kosis.kr/openapi/statisticsData.do?method=getList
 ~~~asciiarmor
 
 [하천_면적]  //추후작업예정
-[https://kosis.kr/statHtml/statHtml.do?orgId=460&tblId=TX_315_2009_H1386&vw_cd=MT_ZTITLE&list_id=315_31502_010_001&seqNo=&lang_mode=ko&language=kor&obj_var_id=&itm_id=&conn_path=MT_ZTITLE]
+[]
 [10년미만,10년이상 합칠수 있으면 합치고 못합치면 10년미만-계, 10년이상-계]
 
 ~~~
@@ -276,6 +276,11 @@ https://kosis.kr/openapi/statisticsData.do?method=getList
 [F]
 [2012~2021]
 [&format=json&jsonVD=Y&userStatsId=vt0602/101/DT_1EB002/2/1/20220318161216&prdSe=Y]
+~~~
+
+~~~
+[미세먼지 연평균 (시/군/구)]
+
 ~~~
 
 
