@@ -30,7 +30,7 @@
     <Compile Include="testCode\jsonToDFtest.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="UrlBuilder.py">
+    <Compile Include="testCode\autoVtest.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Machine_learning_Server_with_Flask.py" />

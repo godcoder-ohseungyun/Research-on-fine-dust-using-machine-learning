@@ -53,8 +53,9 @@ def getAnalysis():
     return response
     
 
-
-
+'''
+url + df builder 합칠꺼임 이구간 변화할 예정
+'''
 def getOpenApi():
     
     url1,url2 = UrlBuilder().buildRequsetUrls()
