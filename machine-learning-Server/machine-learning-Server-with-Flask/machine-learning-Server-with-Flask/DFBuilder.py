@@ -34,13 +34,13 @@ class DFBuilder:
         kosisService_key = 'ZDYyOTEwNjM2OTJmMGM2MDk3ODlkODE1ZmFkMmI5Yjk='
 
         #주제 리스트: 수집할 모든 데이터 주제를 유지합니다. (약자사용: 약자문서 확인)
-        topics = ["SMT"]
+        topics = ['SOF','GA']
 
         #주제별: 수집기간,고정URL: 주제별로 수집할 기간, 고정url부분을 유지합니다. (자세한사항 문서확인)
-        SMT = [[2017,2018,2019,2022],'&format=json&jsonVD=Y&userStatsId=vt0602/117/DT_H_SM/2/1/20220314130922&prdSe=Y'] 
-     
         
-
+        
+        SOF = [[202101],'&format=json&jsonVD=Y&userStatsId=vt0602/399/TX_399020016/2/1/20220318151356&prdSe=H'] 
+        GA = [[2012,2013,2014,2015],'&format=json&jsonVD=Y&userStatsId=vt0602/460/TX_315_2009_H1037/2/1/20220318151611&prdSe=Y']
         
         '''
         -api 자동 요청 모듈- (동적코드 사용)
@@ -100,7 +100,7 @@ class DFBuilder:
             #데이터프레임 자동 생성기 호출
             self.getDataFrames()
 
-            print(SMT_DF_2017,SMT_DF_2018,SMT_DF_2019)
+            print(SOF_DF_202101,GA_DF_2012,GA_DF_2013,GA_DF_2014)
             #SMT_DF_2017, SMT_DF_2018, SMT_DF_2019 이런식으로 데이터프레임 접근해서 사용하면됨
 
             return 'finalDataFrame'

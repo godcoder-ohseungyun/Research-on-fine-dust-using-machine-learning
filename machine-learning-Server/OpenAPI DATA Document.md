@@ -2,7 +2,7 @@
 
 ### Make finalDataFrame using  OpenAP's json response
 
----
+----
 
 **데이터 제공포털 open api**를 통해  얻은 json respone 들을 파싱해서 dataFrame들로 변환후 
 
@@ -60,7 +60,11 @@
 
 
 
-### 모듈화
+
+
+
+
+# 요청 및 변환 자동화 모듈 설계 계획
 
 ---
 
@@ -74,7 +78,7 @@
 
 + **20개의 주제가 존재함으로 200개의 요청 url과 dataFrame이 생성될것이다.**
 
-+ **기능을 쪼개 모듈화해 중복코드를 최대한 줄이고 추후 관리가 편하도록 설계해야한다.**
++ **<u>중복코드를 최대한 줄이고 추후 관리가 편하도록 설계해야한다.</u>**
 
   > 인증키 만료
   >
@@ -88,25 +92,191 @@
 
 
 
-### **설계 계획**
+
+
+**How?**
+
+### <u>동적코딩기술을 이용</u>
+
+자바에서 사용했던 **자바 리플렉션(java Reflection)**처럼 **동적으로** 클래스,변수,메서드 등에 접근해 결과를 만들어내도록 **설계하면** **중복제거**와 **유지 보수** 두 마리 토끼를 모두 잡을수있다.
+
+
+
+### <u>요청 url 패턴분석</u>
+
+요청 url들의 패턴을 분석해 **동적인 부분과 정적인 부분을 구분**해 url encoding 시 동적 코딩기술이 적용될 부분을 파악한다.
+
+~~~http
+https://kosis.kr/openapi/statisticsData.do?method=getList
+&apiKey=ZDYyOTEwNjM2OTJmMGM2MDk3ODlkODE1ZmFkMmI5Yjk=
+&format=json 
+&jsonVD=Y
+&userStatsId=vt0602/117/DT_H_SM/2/1/20220314130922
+&prdSe=Y
+&startPrdDe=2018&endPrdDe=2018
+~~~
+
+> + **apiKey:** 인증키 부분
+> + **startPrdDe , endPrdDe:** 조회기간 부분(최대 1년임 ,  2017~2018 불가   2018~2018 가능)
+> + **나머지:** 주제별로 가지는 부분(자료 ID,페이지 수 등등)
 
 
 
 
 
+**apiKey 와 나머지 부분은 정적 queryparam**
+
++ apiKey는 인증기간 만료때만 갱신해주면됨
 
 
 
+**startPrdDe , endPrdDe 은 동적 queryparam**
+
++ 기간별로 1개씩 데이터프레임을 받을것임으로 이부분만 동적으로 바꿔가면서 요청 보내면 됨
 
 
 
+### <u>변수명 규칙 결정</u>
 
++ 아 멀티쓰래딩 마렵다
++ 가이드 20페이지
++ 소계단위로 받아지도록 해야함 > level별 2로 선택
 
+~~~
+[주제]
+[필요속성]
+[약자코드]
+[주기]
+[고정코드]
+~~~
 
+---
 
+~~~
+[공장현황및면적]
+[면적]
+[SOF]
+[201502 ~ 202101] (반기 01 02)
+[&format=json&jsonVD=Y&userStatsId=vt0602/399/TX_399020016/2/1/20220318151356&prdSe=H]
+~~~
 
+~~~
+[녹지면적]
+[계-면적]
+[GA]
+[2012 ~ 2020] 
+[&format=json&jsonVD=Y&userStatsId=vt0602/460/TX_315_2009_H1037/2/1/20220318151611&prdSe=Y]
+~~~
 
+~~~
+[녹지율]
+[녹지지역-면적]
+[GR]
+[2012 ~ 2020]
+[&format=json&jsonVD=Y&userStatsId=vt0602/101/DT_1YL202105E/2/1/20220318152644&prdSe=Y]
+~~~
 
+~~~
+[도시지역인구현황]
+[전체인구]
+[PR]
+[2012~2020]
+[&format=json&jsonVD=Y&userStatsId=vt0602/460/TX_315_2009_H1001/2/1/20220318152808&prdSe=Y]
+~~~
+
+~~~
+[면적_크기]
+[합계]
+[AS]
+[2012~2020]
+[&format=json&jsonVD=Y&userStatsId=vt0602/460/TX_315_2009_H1002/2/1/20220318152935&prdSe=Y]
+~~~
+
+~~~
+[자동차주행거리]
+[합계+승용차+승합차+화물차]
+[CM]
+[2012~2020]
+[&format=json&jsonVD=Y&userStatsId=vt0602/426/DT_426001_N004/2/1/20220318153302&prdSe=Y]
+~~~
+
+~~~asciiarmor
+
+[하천_면적]  //추후작업예정
+[https://kosis.kr/statHtml/statHtml.do?orgId=460&tblId=TX_315_2009_H1386&vw_cd=MT_ZTITLE&list_id=315_31502_010_001&seqNo=&lang_mode=ko&language=kor&obj_var_id=&itm_id=&conn_path=MT_ZTITLE]
+[10년미만,10년이상 합칠수 있으면 합치고 못합치면 10년미만-계, 10년이상-계]
+
+~~~
+
+~~~
+[현재흡연율]
+[조율]
+[SM]
+[2012~2019]
+[&format=json&jsonVD=Y&userStatsId=vt0602/117/DT_H_SM/2/1/20220318153811&prdSe=Y]
+~~~
+
+~~~
+[강수량]
+[RR]
+[2012~2021]
+[&format=json&jsonVD=Y&userStatsId=vt0602/101/DT_1YL9901/2/1/20220318154444&prdSe=Y]
+~~~
+
+~~~
+[유동인구]
+[총전입 총전출 순이동]
+[FP]
+[2012~2021]
+[&format=json&jsonVD=Y&userStatsId=vt0602/101/DT_1B26001_A01/2/1/20220318154916&prdSe=Y]
+~~~
+
+~~~
+[폐기물처리시설매립시설]
+[매립량(면적) 매립량(톤)]
+[2012~2019]
+[TLF]
+[&format=json&jsonVD=Y&userStatsId=vt0602/106/DT_106N_99_3300027/2/1/20220318155252&prdSe=Y]
+~~~
+
+~~~
+[폐기물처리시설현황]
+[처리량]
+[2012~2019]
+[PTR]
+[&format=json&jsonVD=Y&userStatsId=vt0602/106/DT_106T_009432/2/1/20220318155650&prdSe=Y]
+~~~
+
+~~~
+[이산화탄소대기오염도]
+[CO2]
+[201201~202012] (월단위: 2021 존재는 하는데 아직 4월까지만 있어서 제외함)
+[&format=json&jsonVD=Y&userStatsId=vt0602/106/DT_106N_03_0200044/2/1/20220318160001&prdSe=M]
+~~~
+
+~~~
+[농장수및마리수]
+[한육우:마리수]
+[COW]
+[201401~202104] (분기 4분기순 01 02 03 04)
+[&format=json&jsonVD=Y&userStatsId=vt0602/101/DT_1EO200/2/1/20220318160410&prdSe=Q]
+~~~
+
+~~~
+[폐수유기물질방류량]
+[폐수발생량, 폐수방류량, 유기물질부하량]
+[WW]
+[2012~2019]
+[&format=json&jsonVD=Y&userStatsId=vt0602/106/DT_106N_01_0100069/2/1/20220318160929&prdSe=Y]
+~~~
+
+~~~
+[논밭별경지면적]
+[계]
+[F]
+[2012~2021]
+[&format=json&jsonVD=Y&userStatsId=vt0602/101/DT_1EB002/2/1/20220318161216&prdSe=Y]
+~~~
 
 
 
