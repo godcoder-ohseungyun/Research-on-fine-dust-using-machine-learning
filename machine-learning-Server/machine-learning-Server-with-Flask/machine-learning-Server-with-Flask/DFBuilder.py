@@ -60,9 +60,7 @@ class DFBuilder:
         COW = [cm.getCycle("quarterly"),'&format=json&jsonVD=Y&userStatsId=vt0602/101/DT_1EO200/2/1/20220318160410&prdSe=Q']
         WW = [cm.getCycle("annual"),'&format=json&jsonVD=Y&userStatsId=vt0602/106/DT_106N_01_0100069/2/1/20220318160929&prdSe=Y']
         F=[cm.getCycle("annual"),'&format=json&jsonVD=Y&userStatsId=vt0602/101/DT_1EB002/2/1/20220318161216&prdSe=Y']
-
-
-
+        
 
         
 
@@ -145,17 +143,32 @@ class DFBuilder:
             else:
                 self.readCacheStorage()
 
-            print(SM_DF_2015)
+           
    
 
 
+        def makeFinalDataFrame(self):
+
+            #dataFrames 전역생성
+            self.readDataFrames(False)  #True로 바꾸면 api로부터 데이터 호출후 전역생성
+
+            
+
+            '''
+            정제작업
+            '''
+
+
+            return 'FinaldataFrame'
 
 
 
+#testCode
 
-dff = DFBuilder()
 
-dff.readDataFrames(False)  #True로 바꾸면 api로부터 데이터 호출후 전역생성
+t = DFBuilder()
+
+t.makeFinalDataFrame()
 
 
         
