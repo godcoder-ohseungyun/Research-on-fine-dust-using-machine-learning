@@ -21,6 +21,12 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="fileMaker.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="cycleMaker.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Item.py">
       <SubType>Code</SubType>
     </Compile>
@@ -34,8 +40,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Machine_learning_Server_with_Flask.py" />
+    <Compile Include="testCode\file.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="dataFrames\" />
     <Folder Include="testCode\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />

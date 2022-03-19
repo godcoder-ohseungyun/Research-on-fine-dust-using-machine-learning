@@ -1,0 +1,55 @@
+﻿TBL_NM,PRD_DE,TBL_ID,ITM_NM,ITM_NM_ENG,ITM_ID,UNIT_NM,ORG_ID,UNIT_NM_ENG,C1_OBJ_NM,C1_OBJ_NM_ENG,DT,PRD_SE,C1,C1_NM,C1_NM_ENG
+시군구별 이동자수,2013,DT_1B26001_A01,총전입,Total in-migrants,T10,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),7411784,A,00,전국,Whole Country
+시군구별 이동자수,2013,DT_1B26001_A01,총전출,Total out-migrants,T20,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),7411784,A,00,전국,Whole Country
+시군구별 이동자수,2013,DT_1B26001_A01,순이동,Netmigration(Administrative reports),T25,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),0,A,00,전국,Whole Country
+시군구별 이동자수,2013,DT_1B26001_A01,총전입,Total in-migrants,T10,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),1520090,A,11,서울특별시,Seoul
+시군구별 이동자수,2013,DT_1B26001_A01,총전출,Total out-migrants,T20,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),1620640,A,11,서울특별시,Seoul
+시군구별 이동자수,2013,DT_1B26001_A01,순이동,Netmigration(Administrative reports),T25,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),-100550,A,11,서울특별시,Seoul
+시군구별 이동자수,2013,DT_1B26001_A01,총전입,Total in-migrants,T10,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),478451,A,26,부산광역시,Busan
+시군구별 이동자수,2013,DT_1B26001_A01,총전출,Total out-migrants,T20,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),496161,A,26,부산광역시,Busan
+시군구별 이동자수,2013,DT_1B26001_A01,순이동,Netmigration(Administrative reports),T25,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),-17710,A,26,부산광역시,Busan
+시군구별 이동자수,2013,DT_1B26001_A01,총전입,Total in-migrants,T10,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),351873,A,27,대구광역시,Daegu
+시군구별 이동자수,2013,DT_1B26001_A01,총전출,Total out-migrants,T20,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),363224,A,27,대구광역시,Daegu
+시군구별 이동자수,2013,DT_1B26001_A01,순이동,Netmigration(Administrative reports),T25,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),-11351,A,27,대구광역시,Daegu
+시군구별 이동자수,2013,DT_1B26001_A01,총전입,Total in-migrants,T10,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),461613,A,28,인천광역시,Incheon
+시군구별 이동자수,2013,DT_1B26001_A01,총전출,Total out-migrants,T20,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),439578,A,28,인천광역시,Incheon
+시군구별 이동자수,2013,DT_1B26001_A01,순이동,Netmigration(Administrative reports),T25,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),22035,A,28,인천광역시,Incheon
+시군구별 이동자수,2013,DT_1B26001_A01,총전입,Total in-migrants,T10,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),226696,A,29,광주광역시,Gwangju
+시군구별 이동자수,2013,DT_1B26001_A01,총전출,Total out-migrants,T20,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),229288,A,29,광주광역시,Gwangju
+시군구별 이동자수,2013,DT_1B26001_A01,순이동,Netmigration(Administrative reports),T25,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),-2592,A,29,광주광역시,Gwangju
+시군구별 이동자수,2013,DT_1B26001_A01,총전입,Total in-migrants,T10,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),230858,A,30,대전광역시,Daejeon
+시군구별 이동자수,2013,DT_1B26001_A01,총전출,Total out-migrants,T20,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),230547,A,30,대전광역시,Daejeon
+시군구별 이동자수,2013,DT_1B26001_A01,순이동,Netmigration(Administrative reports),T25,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),311,A,30,대전광역시,Daejeon
+시군구별 이동자수,2013,DT_1B26001_A01,총전입,Total in-migrants,T10,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),159492,A,31,울산광역시,Ulsan
+시군구별 이동자수,2013,DT_1B26001_A01,총전출,Total out-migrants,T20,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),157185,A,31,울산광역시,Ulsan
+시군구별 이동자수,2013,DT_1B26001_A01,순이동,Netmigration(Administrative reports),T25,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),2307,A,31,울산광역시,Ulsan
+시군구별 이동자수,2013,DT_1B26001_A01,총전입,Total in-migrants,T10,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),23805,A,36,세종특별자치시,Sejong
+시군구별 이동자수,2013,DT_1B26001_A01,총전출,Total out-migrants,T20,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),15109,A,36,세종특별자치시,Sejong
+시군구별 이동자수,2013,DT_1B26001_A01,순이동,Netmigration(Administrative reports),T25,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),8696,A,36,세종특별자치시,Sejong
+시군구별 이동자수,2013,DT_1B26001_A01,총전입,Total in-migrants,T10,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),1895434,A,41,경기도,Gyeonggi-do
+시군구별 이동자수,2013,DT_1B26001_A01,총전출,Total out-migrants,T20,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),1821303,A,41,경기도,Gyeonggi-do
+시군구별 이동자수,2013,DT_1B26001_A01,순이동,Netmigration(Administrative reports),T25,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),74131,A,41,경기도,Gyeonggi-do
+시군구별 이동자수,2013,DT_1B26001_A01,총전입,Total in-migrants,T10,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),217917,A,42,강원도,Gangwon-do
+시군구별 이동자수,2013,DT_1B26001_A01,총전출,Total out-migrants,T20,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),214931,A,42,강원도,Gangwon-do
+시군구별 이동자수,2013,DT_1B26001_A01,순이동,Netmigration(Administrative reports),T25,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),2986,A,42,강원도,Gangwon-do
+시군구별 이동자수,2013,DT_1B26001_A01,총전입,Total in-migrants,T10,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),215973,A,43,충청북도,Chungcheongbuk-do
+시군구별 이동자수,2013,DT_1B26001_A01,총전출,Total out-migrants,T20,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),212860,A,43,충청북도,Chungcheongbuk-do
+시군구별 이동자수,2013,DT_1B26001_A01,순이동,Netmigration(Administrative reports),T25,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),3113,A,43,충청북도,Chungcheongbuk-do
+시군구별 이동자수,2013,DT_1B26001_A01,총전입,Total in-migrants,T10,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),281428,A,44,충청남도,Chungcheongnam-do
+시군구별 이동자수,2013,DT_1B26001_A01,총전출,Total out-migrants,T20,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),268053,A,44,충청남도,Chungcheongnam-do
+시군구별 이동자수,2013,DT_1B26001_A01,순이동,Netmigration(Administrative reports),T25,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),13375,A,44,충청남도,Chungcheongnam-do
+시군구별 이동자수,2013,DT_1B26001_A01,총전입,Total in-migrants,T10,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),258198,A,45,전라북도,Jeollabuk-do
+시군구별 이동자수,2013,DT_1B26001_A01,총전출,Total out-migrants,T20,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),260395,A,45,전라북도,Jeollabuk-do
+시군구별 이동자수,2013,DT_1B26001_A01,순이동,Netmigration(Administrative reports),T25,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),-2197,A,45,전라북도,Jeollabuk-do
+시군구별 이동자수,2013,DT_1B26001_A01,총전입,Total in-migrants,T10,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),244329,A,46,전라남도,Jeollanam-do
+시군구별 이동자수,2013,DT_1B26001_A01,총전출,Total out-migrants,T20,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),246635,A,46,전라남도,Jeollanam-do
+시군구별 이동자수,2013,DT_1B26001_A01,순이동,Netmigration(Administrative reports),T25,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),-2306,A,46,전라남도,Jeollanam-do
+시군구별 이동자수,2013,DT_1B26001_A01,총전입,Total in-migrants,T10,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),329118,A,47,경상북도,Gyeongsangbuk-do
+시군구별 이동자수,2013,DT_1B26001_A01,총전출,Total out-migrants,T20,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),330983,A,47,경상북도,Gyeongsangbuk-do
+시군구별 이동자수,2013,DT_1B26001_A01,순이동,Netmigration(Administrative reports),T25,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),-1865,A,47,경상북도,Gyeongsangbuk-do
+시군구별 이동자수,2013,DT_1B26001_A01,총전입,Total in-migrants,T10,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),427658,A,48,경상남도,Gyeongsangnam-do
+시군구별 이동자수,2013,DT_1B26001_A01,총전출,Total out-migrants,T20,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),423864,A,48,경상남도,Gyeongsangnam-do
+시군구별 이동자수,2013,DT_1B26001_A01,순이동,Netmigration(Administrative reports),T25,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),3794,A,48,경상남도,Gyeongsangnam-do
+시군구별 이동자수,2013,DT_1B26001_A01,총전입,Total in-migrants,T10,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),88851,A,50,제주특별자치도,Jeju
+시군구별 이동자수,2013,DT_1B26001_A01,총전출,Total out-migrants,T20,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),81028,A,50,제주특별자치도,Jeju
+시군구별 이동자수,2013,DT_1B26001_A01,순이동,Netmigration(Administrative reports),T25,명,101,Person,행정구역(시군구)별,By administrative divisions(si gun gu),7823,A,50,제주특별자치도,Jeju
