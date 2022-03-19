@@ -5,7 +5,7 @@ import os
 
 class FileMaker:
 
-    root = 'C:/Users/afrad/OneDrive/문서/Research-on-fine-dust-using-machine-learning/machine-learning-Server/machine-learning-Server-with-Flask/machine-learning-Server-with-Flask/dataFrames/'
+    root = 'dataFrames/'
 
     def createDirectory(self,directory): 
 

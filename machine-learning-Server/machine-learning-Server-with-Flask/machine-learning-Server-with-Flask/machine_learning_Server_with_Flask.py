@@ -1,19 +1,15 @@
 from flask import Flask 
 from flask import Response
 
-# 사용자 정의 모듈: 모듈로 부터 클래스 가져옴: 임포트 방식 알아둘것
-from UrlBuilder import UrlBuilder
 
-#
 from DFBuilder import DFBuilder
-
 
 from Item import Item
 import json
 
 app = Flask(__name__)
 
-#테스트 컨트롤러
+#테스트 용 컨트롤러임-------------------------------------------------------
 @app.route('/test')
 def test():
 
@@ -25,7 +21,12 @@ def test():
     jsonResult = json.dumps([Item.__dict__ for Item in testList],ensure_ascii=False) #testList -> resultList
 
     response = Response(response=jsonResult, status=200, mimetype="application/json; charset=utf-8")
+
     return response
+#---------------------------------------------------------------------------
+
+
+
 
 
 @app.route('/')
@@ -37,7 +38,7 @@ def hello_world():
 @app.route('/api/result')
 def getAnalysis():
 
-    finalDataFrame = getOpenApi()
+    finalDataFrame = getFinalDataFrame()
 
     LogisticModel = doLogisticRegression(finalDataFrame)
 
@@ -56,13 +57,11 @@ def getAnalysis():
 '''
 url + df builder 합칠꺼임 이구간 변화할 예정
 '''
-def getOpenApi():
+def getFinalDataFrame():
     
-    url1,url2 = UrlBuilder().buildRequsetUrls()
-
-    finalDataFrame  = DFBuilder().buildDataFrame(url1,url2)
-
-    return  finalDataFrame
+    df = DFBuilder()
+    
+    return  df.makeFinalDataFrame()
 
 
 
@@ -74,7 +73,7 @@ def doLogisticRegression(finalDataFrame):
 
 
 
-def fianlResult(LogisticModel,RegionalRepresentativeDataFrame):
+def finalResult(LogisticModel,RegionalRepresentativeDataFrame):
 
     #TODO: 구현해야함 지금은 테스트코드임
     testList = list()
