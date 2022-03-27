@@ -52,6 +52,10 @@ class DFBuilder:
     wwcity = ['서울특별시', '서울특별시', '부산광역시', '부산광역시', '대구광역시', '대구광역시', '인천광역시', '인천광역시', '광주광역시', '광주광역시', '대전광역시', '대전광역시', '울산광역시', '울산광역시', '세종특별자치시', '세종특별자치시',
               '경기도', '경기도', '강원도', '강원도', '충청북도', '충청북도', '충청남도', '충청남도', '전라북도', '전라북도', '전라남도', '전라남도', '경상북도', '경상북도', '경상남도', '경상남도', '제주특별자치도', '제주특별자치도']
 
+    # 시훈 추가 : 시도를 남기기 위하여
+    cities = ['전국', '요소', '서울특별시', '부산광역시', '대구광역시', '인천광역시', '광주광역시', '대전광역시', '울산광역시', '세종특별자치시',
+              '경기도', '강원도', '충청북도', '충청남도', '전라북도', '전라남도', '경상북도', '경상남도', '제주특별자치도']
+
     # 주제별: 수집기간,고정URL: 주제별로 수집할 기간, 고정url부분을 유지합니다. (자세한사항 문서확인)
     cm = CycleMaker()
 
@@ -291,9 +295,23 @@ class DFBuilder:
                 df1 = df1.rename(columns={col: col[0:4]})
             # print(type(col))
             # print(col)
+        # print("\n\n\n\n\n\n")
+        # print(df1.values)
+        dropnum = 0
+        for val in df1.values:
+            if val[0] not in DFBuilder.cities:
+                print(val[0], '\n')
+                df1 = df1.drop([dropnum])
+                # dropnum -= 1
+            dropnum += 1
+        # print("\n\n\n\n\n\n")
+
         df1.to_csv("{}/DF_all.csv".format(FileMaker.root),
                    index=False, encoding="utf-8-sig")
         print("All Finisihed")
+
+        '''정제작업'''
+
         return 'FinaldataFrame'
 
 
