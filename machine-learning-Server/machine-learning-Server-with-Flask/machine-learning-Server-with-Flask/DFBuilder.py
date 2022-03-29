@@ -100,10 +100,7 @@ class DFBuilder:
                 dataframe.to_csv("{}{}/{}_DF_{}.csv".format(FileMaker.root,topic,topic,year),index=False, encoding="utf-8-sig")
 
 
-        '''
-        -makeDF 실행 모듈-
-        모든 주제에 대하여 makeDF를 수행해서 데이터 프레임들을 전역으로 생성합니다.
-        '''
+      
         def requestAPI(self):
             
             fm = FileMaker()
@@ -126,11 +123,7 @@ class DFBuilder:
             print("모든 DataFrame 불러오기 완료")
                                                                            
 
-        '''
-        -최종데이터프레임 생성 모듈-
-        전역으로 선언되어있는 데이터프레임들을 활용해 최종 데이터 프레임을 반환합니다.
-        이 최종 데이터 프레임은 회귀분석에 사용됩니다.
-        '''
+      
         def readDataFrames(self,renew):
 
             
@@ -152,7 +145,7 @@ class DFBuilder:
             #dataFrames 전역생성
             self.readDataFrames(False)  #True로 바꾸면 api로부터 데이터 호출후 전역생성
 
-            
+            print(globals())
 
             '''
             정제작업
