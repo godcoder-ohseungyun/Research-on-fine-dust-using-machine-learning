@@ -257,7 +257,6 @@ class DFBuilder:
             else:
                 pass
                 # Make a File using the code beneath
-
             df1.to_csv("{}{}/{}_DF_all.csv".format(FileMaker.root,
                                                    topic, topic), index=False, encoding="utf-8-sig")
 
@@ -300,12 +299,11 @@ class DFBuilder:
         dropnum = 0
         for val in df1.values:
             if val[0] not in DFBuilder.cities:
-                print(val[0], '\n')
                 df1 = df1.drop([dropnum])
                 # dropnum -= 1
             dropnum += 1
         # print("\n\n\n\n\n\n")
-
+        print(df1)
         df1.to_csv("{}/DF_all.csv".format(FileMaker.root),
                    index=False, encoding="utf-8-sig")
         print("All Finisihed")
